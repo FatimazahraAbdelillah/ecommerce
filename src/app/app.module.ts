@@ -10,6 +10,8 @@ import {TopbarComponent} from "./components/topbar/topbar.component";
 import {CartService} from "./services/cart.service";
 import {CartPopupComponent} from "./pages/cart/cart-popup/cart-popup.component";
 import {ProductService} from "./services/products.service";
+import {CompteService} from './services/compte.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -22,9 +24,10 @@ import {ProductService} from "./services/products.service";
         BrowserModule,
         FormsModule,
         HttpModule,
+        HttpClientModule,
         RouterModule.forRoot(appRoutes)
     ],
-    providers: [CartService,ProductService],
+    providers: [CartService, ProductService , CompteService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
